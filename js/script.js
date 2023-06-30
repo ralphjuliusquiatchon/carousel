@@ -31,6 +31,7 @@ const items = [
 /* SELEZIONO L'ELEMENTO HTML IN CUI VOGLIO METTERE I MIEI ITEMS */
 
 const container = document.querySelector('.items-container');
+const previewContainer = document.querySelector('.preview-container');
 
 /* FACCIO UNA VARIABILE PER AVERE UN INIZIO PER FARE IL CICLO O PER POTER CONFRONTARE [i] */
 
@@ -49,6 +50,8 @@ let currentlyActive = 0;
 for (let i = 0; i < items.length; i++) {
     const item = items [i]; 
     console.log (item);
+
+    
 
 /* CREARE UNA CONDIZIONE CHE SE L'INDICE DELL'ARRAY CORRISPONDA A [0]
  SI AGGIUNGE UNA CLASSE ACTIVE CIOE' TOGLIE IL DISPLAY: NONE AL ITEM */
@@ -78,6 +81,12 @@ for (let i = 0; i < items.length; i++) {
                                     </h2>
                                 </div>`
     }
+
+
+    previewContainer.innerHTML += `
+                                    <div class="small-preview-container">
+                                        <img src="${item.image}" alt="">
+                                    </div>`
 
     
 };
@@ -147,6 +156,21 @@ prevButton.addEventListener ('click',
      
     
 )
+
+const smallImages = document.querySelectorAll ('.small-preview-container');
+
+8
+smallImages.forEach(function(myclick)) 
+
+.addEventListener ('click',
+     function () {
+        objects[currentlyActive].classList.remove('active');
+        objects[0].classList.add('active');
+    }
+
+)
+
+
 
 
 
